@@ -3,6 +3,7 @@ TelegramChatbot::Engine.routes.draw do
 
   resource :telegram_bots, only: [:show], path: '/bot' do
     put :upsert, on: :collection
+    get :help, on: :collection
   end
 
   # Telegram

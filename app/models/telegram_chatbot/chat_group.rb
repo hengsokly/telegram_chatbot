@@ -3,5 +3,7 @@ module TelegramChatbot
     TELEGRAM_CHAT_TYPES = %w[group supergroup]
     TELEGRAM_SUPER_GROUP = "supergroup"
     TELEGRAM_GROUP = "group"
+
+    belongs_to :telegram_bot, primary_key: "token", foreign_key: "bot_token"
   end
 end

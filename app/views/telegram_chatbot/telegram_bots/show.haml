@@ -4,7 +4,7 @@
       .d-flex.align-items-center
         %h5#exampleModalLabel.modal-title
           = t('program.telegram_bot')
-        = link_to t('shared.need_help'), "help_telegram_bot_path", class: 'btn btn-link'
+        = link_to t('telegram_bot.need_help'), help_telegram_bots_path, class: 'btn btn-link'
 
     .modal-body
       .d-flex
@@ -17,8 +17,8 @@
             %i.far.fa-times-circle.text-danger{'data-toggle'=> 'tooltip', title: t('telegram_bot.invalid_bot')}
 
       .tokens
-        = f.input :token, label: t("telegram_bot.token")
         = f.input :username, label: t("telegram_bot.username")
+        = f.input :token, label: t("telegram_bot.token")
 
     .modal-footer
       = link_to t("shared.cancel"), root_path, class: 'btn btn-secondary'
