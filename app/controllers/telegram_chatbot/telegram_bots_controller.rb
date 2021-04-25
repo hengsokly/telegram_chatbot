@@ -15,6 +15,9 @@ module TelegramChatbot
       end
     end
 
+    def help
+    end
+
     private
       def set_bot
         @telegram_bot = TelegramChatbot::TelegramBot.first || TelegramChatbot::TelegramBot.new

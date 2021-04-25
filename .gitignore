@@ -68,3 +68,5 @@ yarn-debug.log*
 
 test/dummy/tmp/
 test/dummy/log/
+
+.DS_Store

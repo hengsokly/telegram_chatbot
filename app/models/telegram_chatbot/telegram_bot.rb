@@ -5,6 +5,8 @@ module TelegramChatbot
     before_create :post_webhook_to_telegram, if: :enabled?
     before_update :post_webhook_to_telegram, if: :enabled?
 
+    has_many :chat_groups, foreign_key: :bot_token, primary_key: :token
+
     def post_webhook_to_telegram
       bot = Telegram::Bot::Client.new(token: token, username: username)
 

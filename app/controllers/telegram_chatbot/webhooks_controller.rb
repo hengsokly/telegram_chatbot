@@ -23,12 +23,7 @@ module TelegramChatbot
       end
 
       def upsert_chat_group(message)
-        group = ::TelegramChatbot::ChatGroup.find_or_initialize_by(
-          chat_id: message["chat"]["id"].to_s,
-          bot_token: bot.token,
-          bot_username: bot.username
-        )
-
+        group = ::TelegramChatbot::ChatGroup.find_or_initialize_by(chat_id: message["chat"]["id"].to_s, bot_token: bot.token)
         group.update(
           title: message["chat"]["title"],
           actived: message["new_chat_member"].present?,
