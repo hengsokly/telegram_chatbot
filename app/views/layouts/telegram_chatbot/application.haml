@@ -8,6 +8,7 @@
     %link{:crossorigin => "anonymous", :href => "https://use.fontawesome.com/releases/v5.7.0/css/all.css", :integrity => "sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ", :rel => "stylesheet"}
 
     = stylesheet_link_tag    "telegram_chatbot/application", media: "all"
+    = javascript_include_tag "telegram_chatbot/application", media: "all"
 
   %body#telegram_chatbot
     = yield
