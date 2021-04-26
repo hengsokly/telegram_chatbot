@@ -1,0 +1,25 @@
+.w-50.mt-4.modal-content{style: 'margin: 0 auto'}
+  = simple_form_for @telegram_bot, url: '/telegram_chatbot/bot/upsert', method: :put, class: 'setting' do |f|
+    .modal-header
+      .d-flex.align-items-center
+        %h5#exampleModalLabel.modal-title
+          = t('program.telegram_bot')
+        = link_to t('shared.need_help'), help_telegram_bots_path, class: 'btn btn-link'
+
+    .modal-body
+      .d-flex
+        .flex-grow-1
+          = form_check_toggle({name: "telegram_bot[enabled]", checked: f.object.enabled, label: t('program.telegram_notification')}).html_safe
+        %div
+          - if @telegram_bot.present? && @telegram_bot.enabled? && @telegram_bot.actived?
+            %i.far.fa-check-circle.text-success{'data-toggle'=> 'tooltip', title: t('telegram_bot.valid_bot')}
+          - else
+            %i.far.fa-times-circle.text-danger{'data-toggle'=> 'tooltip', title: t('telegram_bot.invalid_bot')}
+
+      .tokens
+        = f.input :username, label: t("telegram_bot.username")
+        = f.input :token, label: t("telegram_bot.token")
+
+    .modal-footer
+      = link_to t("shared.cancel"), root_path, class: 'btn btn-secondary'
+      = f.submit "Save", class: 'btn btn-primary'
