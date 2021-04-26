@@ -5,5 +5,7 @@ module TelegramChatbot
     TELEGRAM_GROUP = "group"
 
     belongs_to :telegram_bot, primary_key: "token", foreign_key: "bot_token"
+
+    scope :actives, -> { where(actived: true) }
   end
 end
