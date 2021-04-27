@@ -66,7 +66,8 @@ yarn-debug.log*
 /storage/*
 !/storage/.keep
 
-test/dummy/tmp/
-test/dummy/log/
+spec/dummy/log/*.log
+spec/dummy/storage/
+spec/dummy/tmp/
 
 .DS_Store

@@ -12,5 +12,7 @@ module TelegramChatbot
 
     validates :title, presence: true
     validates :chat_id, presence: true
+    validates :chat_type, presence: true
+    validates :chat_type, inclusion: { in: TELEGRAM_CHAT_TYPES }
   end
 end
