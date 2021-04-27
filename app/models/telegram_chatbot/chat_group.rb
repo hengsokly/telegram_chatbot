@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module TelegramChatbot
   class ChatGroup < ApplicationRecord
     TELEGRAM_CHAT_TYPES = %w[group supergroup]

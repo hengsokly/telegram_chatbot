@@ -32,6 +32,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "jquery-rails"
   spec.add_dependency "bootstrap"
   spec.add_dependency "simple_form"
+  spec.add_dependency "sidekiq"
   spec.add_dependency "telegram-bot", "~> 0.15.3"
   spec.add_development_dependency "rspec-rails", "~> 4.0.1"
 
