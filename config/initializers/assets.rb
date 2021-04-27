@@ -1,1 +1,1 @@
-Rails.application.config.assets.precompile += %w(application.js)
+Rails.application.config.assets.precompile << "telegram_chatbot_manifest.js"

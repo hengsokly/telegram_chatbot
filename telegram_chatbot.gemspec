@@ -27,13 +27,17 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "rails", "~> 6.0.3", ">= 6.0.3.5"
 
-  spec.add_dependency "haml", "~> 5.1.2"
-  spec.add_dependency "haml-rails", "~> 2.0"
-  spec.add_dependency "jquery-rails", "~> 4.3.5"
-  spec.add_dependency "bootstrap", "~> 4.5.0"
-  spec.add_dependency "simple_form", "~> 5.0.0"
+  spec.add_dependency "haml"
+  spec.add_dependency "haml-rails"
+  spec.add_dependency "jquery-rails"
+  spec.add_dependency "bootstrap"
+  spec.add_dependency "simple_form"
+  spec.add_dependency "sidekiq"
   spec.add_dependency "telegram-bot", "~> 0.15.3"
+
   spec.add_development_dependency "rspec-rails", "~> 4.0.1"
+  spec.add_development_dependency "factory_bot_rails"
+  spec.add_development_dependency "shoulda-matchers"
 
   spec.add_development_dependency "pg"
 end
