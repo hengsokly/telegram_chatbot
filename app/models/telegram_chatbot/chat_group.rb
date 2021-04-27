@@ -9,5 +9,8 @@ module TelegramChatbot
     belongs_to :telegram_bot, primary_key: "token", foreign_key: "bot_token"
 
     scope :actives, -> { where(actived: true) }
+
+    validates :title, presence: true
+    validates :chat_id, presence: true
   end
 end
