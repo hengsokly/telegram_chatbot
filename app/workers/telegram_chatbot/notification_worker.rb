@@ -4,10 +4,10 @@ module TelegramChatbot
   class NotificationWorker
     include Sidekiq::Worker
 
-    def perform(message, groups)
-      return unless message.present? && groups.present?
+    def perform(message, group_id = nil)
+      return if !(group_id.present? && message.present?)
 
-      Notification.notify(message, groups)
+      Notification.notify(message, group)
     end
   end
 end
