@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    telegram_chatbot (0.1.0)
+    telegram_chatbot (0.1.2)
       bootstrap
       haml
       haml-rails
@@ -80,6 +80,10 @@ GEM
     concurrent-ruby (1.1.8)
     connection_pool (2.2.5)
     crass (1.0.6)
+    database_cleaner-active_record (2.0.0)
+      activerecord (>= 5.a)
+      database_cleaner-core (~> 2.0.0)
+    database_cleaner-core (2.0.1)
     diff-lcs (1.4.4)
     erubi (1.10.0)
     erubis (2.7.0)
@@ -225,6 +229,7 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
+  database_cleaner-active_record
   factory_bot_rails
   pg
   rspec-rails (~> 4.0.1)

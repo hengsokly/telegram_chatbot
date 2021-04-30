@@ -32,6 +32,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rspec-rails", "~> 4.0.1"
   spec.add_development_dependency "factory_bot_rails"
   spec.add_development_dependency "shoulda-matchers"
+  spec.add_development_dependency "database_cleaner-active_record"
 
   spec.add_development_dependency "pg"
 end
